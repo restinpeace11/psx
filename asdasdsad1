@@ -1,0 +1,9 @@
+local lib = require(game.ReplicatedStorage.Framework.Library)
+spawn(function()
+    for i=1, 5e3 do
+task.spawn(lib.Network.Invoke, 'request world', 'Void')
+task.spawn(lib.Network.Invoke, 'request world', 'Tech')
+task.spawn(lib.Network.Invoke, 'request world', 'Axolot')
+task.spawn(lib.Network.Invoke, 'request world', 'Fantasy')
+    end
+end)
